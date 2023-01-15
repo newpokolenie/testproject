@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Псевдоэлементы </title>
+  <link rel="stylesheet" href="taskCss/lesStyle.css">
+</head>
+<body>
+   
+  <!-- <section class="project-container"> -->
+<div class="project-container">
+  
+  <h2>Псевдоэлементы </h2>
+  <p>Псевдоэлементы позволяют задать стиль элементов не определённых в html документе, а также генерировать содержимое, которого нет в исходном коде текста. Псевдоэлементы начинаются с ::, чтобы отличить их от псевдоклассов</p>
+  <p>Псевдоэлемент <font color="#EDAF45">::selection</font> применяет стиль к выделенному пользователем тексту. В правилах стилей допускается использовать следующие свойства: color, background, background-color, cursor, outline и text-shadow.</p>
+  <p>Общий вид ::selection : </p>
+  <ul style="list-style: none;">
+    <li>Селектор::selection { ... }</li>
+  </ul>
+
+
+ 
+  <table border="1" width="555px">
+    
+    <tr>
+      <td>
+        <div class="code_container">
+          <ol class="code_list">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            
+           
+               
+          </ol>
+            <ul class="list_nontype">
+              <li><span class="sel">p</span><span class="pseudo">::selection</span>{</li>
+              <li><span class="property">color:</span><span class="value">#ff0</span>;</li>
+              <li><span class="property">background:</span><span class="value">#000</span>;</li>
+              <li>}</li>
+              
+                
+          </ul>
+        </div>
+      </td>
+
+    </tr>
+    <tr>
+     <td> 
+        <p style="background-color: #000; color:#ff0;padding-left: 10px; ">При выделении текста изменит свой цвет.</p>
+        
+      </td>
+    
+    </tr>
+  </table>  
+  <p>Псевдоэлемент, который используется для вывода контента после содержимого элемента, к которому он добавляется. Псевдоэлемент <font color="#EDAF45">::after</font> работает совместно со свойством content.</p>
+  <p>Псевдоэлемент <font color="#EDAF45">::before</font> применяется для отображения контента до содержимого элемента, к которому он добавляется. Работает совместно со свойством content.</p>
+  <p>По умолчанию <font color="#EDAF45">::before</font> и <font color="#EDAF45">::after</font> создает строчный элемент.</p>
+  <p>Общий вид ::before:</p>
+  <ul style="list-style: none;">
+    <li>Селектор::before { content: “ ” }</li>
+  </ul>
+  <p>Общий вид ::after:</p>
+  <ul style="list-style: none;">
+    <li>Селектор::after { content: “ ”}</li>
+  </ul>
+  <p>С помощью псевдоэлементы before и after можно выставлять картинки, текст и различные фигуры.</p>
+
+
+  <table border="1" width="555px">
+    
+    <tr>
+      <td>
+        <div class="code_container">
+          <ol class="code_list">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        
+  
+          </ol>
+            <ul class="list_nontype">
+              <li><span class="sel">p</span><span class="pseudo">::befor</span>{</li>
+              <li><span class="property">content:</span>'';</li>
+              <li><span class="property">display:</span><span class="blue">inline-block</span>;</li>
+              <li><span class="property">width:</span><span class="value">20</span><span class="px">px</span>;</li>
+              <li><span class="property">height:</span><span class="value">20</span><span class="px">px</span>;</li>
+              <li><span class="property">background-color:</span><span class="blue">red</span>;</li>
+              <li><span class="property">border-radius:</span><span class="value">50</span><span class="px">%</span>;</li>
+              <li>}</li>
+              
+                
+          </ul>
+        </div>
+      </td>
+     
+    </tr>
+    <tr>
+      <td>
+        <div style="width: 20px; height:20px; border-radius: 100%; background-color: red; display: inline-block;"></div>
+        <span>Здесь перед текстом красный круг</span>
+
+      </td>
+    </tr>
+  </table>
+ 
+  <table border="1" width="555px">
+    
+    <tr>
+      <td>
+        <div class="code_container" >
+          <ol class="code_list">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+
+          </ol>
+            <ul class="list_nontype">
+              <li><span class="sel">p</span><span class="pseudo">::after</span>{</li>
+              <li><span class="property">content:</span>'Текс через css';</li>
+              <li><span class="property">color:</span><span class="blue">red</span>;</li>
+              <li><span class="property">font-size:</span><span class="value">24</span><span class="px">%</span>;</li>
+              <li>}</li>
+              
+                
+          </ul>
+        </div>
+      </td>
+
+    </tr> 
+    <tr>
+      <td>
+        <div style="display: inline-block;">Текс написанный внутри HTML1</div>
+        <span style="color: red;">Текс через css</span>
+
+
+      </td>
+    </tr>
+  </table>
+  <p>Псевдоэлемент <font color="#EDAF45">::first-letter</font> определяет стиль первого символа в тексте элемента, к которому добавляется. К этому псевдоэлементу могут применяться только стилевые свойства, связанные со свойствами шрифта, полями, отступами, границами, цветом и фоном.</p>
+  <p>Общий вид ::first-letter: </p>
+  <ul style="list-style: none;">
+    <li>Селектор:: first-letter { … }</li>
+  </ul>
+  <table border="1" width="555px">
+    
+    <tr>
+      <td>
+        <div class="code_container" >
+          <ol class="code_list">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+
+          </ol>
+            <ul class="list_nontype">
+              <li><span class="sel">p</span><span class="pseudo">::first-letter</span>{</li>
+    
+              <li><span class="property">color:</span><span class="blue">red</span>;</li>
+              <li><span class="property">text-transform:</span><span class="blue">uppercase</span>;</li>
+              <li><span class="property">font-size:</span><span class="value">30</span><span class="px">px</span>;</li>
+              <li>}</li>
+              
+                
+          </ul>
+        </div>
+      </td>
+
+    </tr> 
+    <tr>
+      <td>
+        
+        <span style="color: red; font-size: 30px;">П</span><span>ервая буква каждой p странет большой красной</span>
+
+
+      </td>
+    </tr>
+  </table>
+  <p>Псевдоэлемент <font color="#EDAF45">::first-line</font>  задаёт стиль первой строки форматированного текста. Длина этой строки зависит от многих факторов, таких как используемый шрифт, размер окна браузера, ширина блока, языка и т.д. </p>
+  <p>В правилах стиля допустимо использовать только свойства, относящиеся к шрифту, изменению цвета текста и фона.</p>
+  <p>Общий вид ::first-line:</p>
+  <ul style="list-style: none;">
+    <li>Селектор::first-line { … }</li>
+  </ul>
+  <table border="1" width="555px">
+    
+    <tr>
+      <td>
+        <div class="code_container" >
+          <ol class="code_list">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+
+          </ol>
+            <ul class="list_nontype">
+              <li><span class="sel">p</span><span class="pseudo">::first-line</span>{</li>
+              <li><span class="property">color:</span><span class="blue">white</span>;</li>
+              <li><span class="property">text-transform:</span><span class="blue">uppercase</span>;</li>
+              <li><span class="property">font-size:</span><span class="value">30</span><span class="px">px</span>;</li>
+              <li><span class="property">background-color:</span><span class="blue">red</span>;</li>
+              <li>}</li>
+              
+                
+          </ul>
+        </div>
+      </td>
+
+    </tr> 
+    <tr>
+      <td>
+        
+        <p> <font  style="color: rgb(249, 244, 244); font-size: 30px;background-color:red;width: 210px; ">Первая строка </font> <br>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, error. Rem molestias ipsum voluptas repellat. Praesentium itaque id odit consequuntur nemo unde sapiente doloribus, mollitia impedit, minima repellendus enim magni?
+        
+        </p>
+
+
+      </td>
+    </tr>
+  </table>
+  <p>Псевдоэлемент, с помощью которого задается стилевое оформление подсказывающего текста, созданного атрибутом <font color="#EDAF45">placeholder</font>. Допускается использовать свойства для изменения вида текста, например, задать шрифт и цвет.
+  </p>
+
+  <table border="1" width="555px">
+    
+    <tr>
+      <td>
+        <div class="code_container" >
+          <ol class="code_list">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+
+          </ol>
+            <ul class="list_nontype">
+              <li><span class="className">.main</span><span class="pseudo">::placeholder</span>{</li>
+              <li><span class="property">color:</span><span class="blue">red</span>;</li>
+              <li><span class="property">font-family:</span><span class="blue">serif</span>;</li>
+              
+              <li>}</li>
+              
+                
+          </ul>
+        </div>
+      </td>
+
+    </tr> 
+    <tr>
+      <td>
+        
+        <p style="width: 120px; color:red;background-color:white;border:solid 2px black "> 
+          Введите имя
+        </p>
+
+
+      </td>
+    </tr>
+  </table>
+
+  <p>Практика </p>
+  <h2>Задание 1</h2>
+  <p>С помощью псевдоэлемента selection сделайте так, чтобы при выделении текста у него появлялась черная тень и текст перекрашивался в зеленый цвет.
+  </p>
+
+  <h2>Задание 2</h2>
+  <p>C помощью псевдоэлемента before и after добавьте для h1 две полоски шириной 50px
+  </p>
+  <h2>Задание 3</h2>
+  <p>C помощью псевдо элемента before и after поставьте возле div две картинки </p>
+  <h2>Задание 4</h2>
+  <p>С помощью псевдоэлемента placeholder сделайте так чтобы подсказка внутри input стала желтого цвета, размером в 24px, с засечками</p>
+  <h2>Задание  5</h2>
+  <p>Это задание находится по ссылке: <a href="https://drive.google.com/drive/folders/1ieaOXqjp-xMGNd6es4H7K0XaSdsPuVBm?usp=sharing">Задание тут</a></p>
+</div>
+
+</body>
+</html>

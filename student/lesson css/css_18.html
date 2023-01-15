@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="taskCss/lesStyle.css">
+</head>
+<body>
+  
+  <!-- <section class="project-container"> -->
+<div class="project-container">
+  
+<h2>Основы работы с flexbox</h2>
+<p><b>Flexbox (официальное название CSS Flexible Box Layout Module)</b>  -  это новый модуль для макетов в CSS3, направленный на улучшение работы с элементами, их выравнивание, изменения направление и порядка их в контейнере, даже когда они динамические или неизвестного размера. Важнейшей особенностью flex-контейнера является возможность изменять ширину или высоту ее потомков, чтобы заполнять свободное пространство при различных размерах экрана.</p>
+<p><b>Модель flexbox</b></p>
+<p>Flex-макет состоит из родительского контейнера, назовем его flex-container, и его блоков-потомков, которые называются flex-items
+</p>
+<img src="taskCssImg/flex_18.jpg" alt=" ">
+<p>Главная задумка flex-вёрстки в наделении контейнера способностью изменять ширину/высоту (и порядок) своих элементов для наилучшего заполнения пространства. Flex-контейнер растягивает элементы для заполнения свободного места или сжимает их, чтобы предотвратить выход за границы.</p>
+ <h3>Использование</h3>
+ <p>Чтобы использовать макет flexbox нужно 
+  просто установить свойство display для 
+  <b>родительского</b> HTML-элемента (‘то свойство 
+  достаточно установить только для 
+  родительского контейнера и все его
+   прямые потомки автоматически станут
+    flex-элементами)</p>
+  
+    <div class="code_container">
+      <ol class="code_list">
+        <li></li>
+        <li></li>
+        <li></li>
+       
+      </ol>
+      <ul class="list_nontype">
+        <li><span class="className">.flex-container</span>{</li>
+        <li><span class="property">display: flex</span>;</li>
+        <li>}</li>
+        <li><span class="property">margin: </span><span class="value">20</span><span class="px">px</span>;</li>
+        
+      </ul>
+    </div>
+
+    <p>Если необходимо  отображать его как inline элемент можно использовать свойство inline-flex</p>
+
+    <div class="code_container">
+      <ol class="code_list">
+        <li></li>
+        <li></li>
+        <li></li>
+       
+      </ol>
+      <ul class="list_nontype">
+        <li><span class="className">.flex-container{
+        </span></li>
+        <li><span class="property">display: inline-flex</span>;</li>
+        <li>}</li>
+        
+      </ul>
+    </div>
+    <h3>Flexbox-свойства контейнеров</h3>
+    <p>Одним из основных понятий в flexbox являются оси.
+         Главной осью flex-контейнера является направление, в соответствии с которым располагаются все его дочерние элементы.
+         Поперечной осью называется направление, перпендикулярное главной оси.
+</p>
+<img src="taskCssImg/flex_182.jpg" alt="" >
+<p>Главная ось по умолчанию располагается слева направо. Поперечная – сверху вниз. Направление главной оси flex-контейнера можно задавать, используя базовое css свойство <b>flex-direction</b></p>
+<h3>flex-direction</h3>
+<p>Это свойство определяет, как flex-элементы размещаются в flex-контейнере, устанавливает направление главной оси flex-контейнеров. Они могут быть установлены в двух основных направлениях, как строки по горизонтали или как колонки по вертикали.</p>
+<p><b> Доступные значения flex-direction:</b></p>
+<ul>
+  <li>row (значение по умолчанию) : слева направо (в rtl справа налево)
+  </li>
+  <li>row-reverse: справа налево (в rtl слева направо)
+  </li>
+  <li>column: сверху вниз
+  </li>
+  <li>column-reverse: снизу вверх
+  </li>
+</ul>
+<img src="taskCssImg/css18t1.jpg" alt="">
+<img src="taskCssImg/css18t2.png" alt="">
+<img src="taskCssImg/css18t3.jpg" alt="">
+<img src="taskCssImg/css18t4.jpg" alt="">
+
+</div>
+
+
+
+
+
+<!-- <div class="code_container">
+  <ol class="code_list">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ol>
+  <ul class="list_nontype">
+    <li>&lt;<span class="tag-name">form</span>&gt;</li>
+    <li>&lt;<span class="tag-name">label</span>&gt;Ключевое слово&lt;/<span class="tag-name">label</span>&gt;</li>
+    <li>&lt;<span class="tag-name">input</span> <span class="attribute-name">type</span>=<span class="attribute-value">"значение"</span> <span class="attribute-name">name</span>=<span class="attribute-value">"имя"</span> <span class="attribute-name">placeholder</span>=<span class="attribute-value">"подсказка"</span>&gt;</li>
+    <li>&lt;/<span class="tag-name">form</span>&gt;</li>
+  </ul>
+</div> -->
+</body>
+</html>

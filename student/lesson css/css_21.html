@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="taskCss/lesStyle.css">
+</head>
+<body>
+  
+  <!-- <section class="project-container"> -->
+<div class="project-container">
+  
+
+<h2>CSS правила для дочерних элементов flex-контейнера (flex-блоков)</h2>
+<h2> flex-basis</h2>
+<p>Задает базовый (начальный)  размер по главной оси отдельно взятого  flex-блока до того, как к нему будут применены преобразования, основанные на других flex-факторах.</p>
+<p>Может быть задан в любых единицах измерения длины (px, em, %, …) или auto (по умолчанию).</p>
+<p>Если задан как auto – за основу берутся размеры блока (width, height), которые, в свою очередь, могут зависеть от размера контента, если не указаны явно.</p>
+<h2>flex-grow – фактор “жадности” отдельно взятого flex-блока</h2>
+<p>Определяет то, на сколько отдельный flex-блок может быть больше соседних элементов, если это необходимо. flex-grow принимает безразмерное значение (по умолчанию 0)</p>
+<p>Например:</p>
+<ul>
+  <li>Если все flex-блоки внутри flex-контейнера имеют flex-grow:1, то они будут одинакового размера, но если один из них имеет flex-grow:2, то он будет стремиться стать в 2 раза больше, чем все остальные.</li>
+  <li>Если все flex-блоки внутри flex-контейнера имеют flex-grow:3, то они будут одинакового размера, но если один из них имеет flex-grow:9, то он будет стремиться стать в 3 раза больше, чем все остальные.</li>
+
+</ul>
+<h2>flex-shrink – фактор “сжимаемости” отдельно взятого flex-блока</h2>
+<p>Определяет, насколько flex-блок будет уменьшаться относительно соседних элементов внутри flex-контейнера в случае недостатка свободного места. По умолчанию равен 1.</p>
+<h2>Короткая запись flex</h2>
+<div class="code_container">
+  <ol class="code_list">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  
+       
+  </ol>
+    <ul class="list_nontype">
+      <li><span class="className">.flex-item</span>{</li>
+      <li><span class="property">flex-grow:</span><span class="value">12</span>;</li>
+      <li><span class="property">flex-shrink:</span><span class="value">3</span>;</li>
+      <li><span class="property"> flex basis:</span><span class="value">30</span><span class="px">em</span>;</li>
+      <li>}</li>
+      
+        
+  </ul>
+</div>
+<p>Так будет выглядеть сокращенно</p>
+<div class="code_container">
+  <ol class="code_list">
+    <li></li>
+    <li></li>
+    <li></li>
+   
+  
+       
+  </ol>
+    <ul class="list_nontype">
+      <li><span class="className">.flex-item</span>{</li>
+      <li><span class="property">flex:</span><span class="value">12 3 30</span><span class="px">em</span>;</li>
+      <li>}</li>
+      
+        
+  </ul>
+</div>
+
+
+
+<!--  -->
+<h2>align-self – выравнивание отдельно взятого flex-блока по поперечной оси</h2>
+<p>Это свойство делает возможным переопределять свойство flex-контейнера align-items для отдельного flex-блока.</p>
+<h2>Доступные значения align-self:</h2>
+<ul>
+  <li><b>flex-start:</b> flex-блок прижат к началу поперечной оси  </li>
+  <li><b>flex-end:</b> flex-блок прижат к концу поперечной оси</li>
+  <li><b>center</b>: flex-блок располагаются в центре поперечной оси</li>
+  <li><b>baseline:</b> flex-блок выравнен по baseline  </li>
+  <li>stretch: (значение по умолчанию) : flex-блок растянут, чтобы занять все доступное место по поперечной оси, при этом учитываются min-width/max-width, если таковые заданы.</li>
+</ul>
+
+<img src="taskCssImg/css_191.jpg" alt="">
+
+<h2>order – порядок следования отдельно взятого flex-блока внутри flex-контейнера.</h2>
+<p>По умолчанию все блоки будут следовать друг за другом в порядке, заданном в html. Однако этот порядок можно изменить с помощью свойства order. Оно задается <font color="grey">целым числом</font> и по умолчанию равно 0.
+  Значение order не задает абсолютную позицию элемента в последовательности. Оно определяет вес позиции элемента.
+</p>
+<h2>margin: auto – центрирование по вертикали и горизонтали</h2>
+<p>Нам известно и привычно центрирование блоков по  горизонтали через margin:0 auto.  Для Flexbox  центрирование  работает и по вертикали. </p>
+
+<div class="code_container">
+  <ol class="code_list">
+    <li></li>
+    <li></li>
+    <li></li>
+   
+  </ol>
+  <pre><code id="htmlViewer" style="color:rgb(220, 220, 220); font-weight:400;background-color:rgb(30, 30, 30);background:rgb(0, 0, 0);display:block;padding: .5em;"><span style="color:rgb(155, 155, 155); font-weight:400;">&lt;<span style="color:rgb(86, 156, 214); font-weight:400;">div</span> <span style="color:rgb(156, 220, 254); font-weight:400;">class</span>=<span style="color:rgb(214, 157, 133); font-weight:400; border-radius: 20px;">&quot;block&quot;</span>&gt;</span>
+    <span style="color:rgb(155, 155, 155); font-weight:400;">&lt;<span style="color:rgb(86, 156, 214); font-weight:400;">div</span> <span style="color:rgb(156, 220, 254); font-weight:400;">class</span>=<span style="color:rgb(214, 157, 133); font-weight:400;">&quot;box&quot;</span>&gt;</span><span style="color:rgb(155, 155, 155); font-weight:400;">&lt;/<span style="color:rgb(86, 156, 214); font-weight:400;">div</span>&gt;</span>
+<span style="color:rgb(155, 155, 155); font-weight:400;">&lt;/<span style="color:rgb(86, 156, 214); font-weight:400;">div</span>&gt;</span>
+   </code></pre>
+</div>
+
+<br>
+
+<div class="code_container">
+  <ol class="code_list">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+   
+  
+       
+  </ol>
+    <ul class="list_nontype">
+      <li><span class="className">.block</span>{</li>
+      <li><span class="property">display:</span><span class="blue">flex</span>;</li>
+      
+      <li><span class="property">height:</span><span class="blue">300</span><span class="px">px</span>;</li>
+      <li>}</li>
+      
+      <li><span class="className">.box</span>{</li>
+      <li><span class="property">width:</span><span class="blue">100</span><span class="px">px</span>;</li>
+      <li><span class="property">height:</span><span class="blue">100</span><span class="px">px</span>;</li>
+      <li><span class="property">margin:</span><span class="blue">auto</span><span class="comment"> /* Магия! Блок отцентрирован по вертикали и горизонтали! */</span>;</li>
+      <li>}</li>
+        
+  </ul>
+</div>
+<br>
+<img src="taskCssImg/css_211.jpg" alt="">
+<h2>Задание 7</h2>
+<p>Макет для данного задания можете найти по ссылке - <a href="https://drive.google.com/drive/folders/1LVC5whlpieoUM3oce3mFpM3OfwYObzou?usp=sharing">Задание тут</a></p>
+<h2>Задание 8</h2>
+<p>Макет для данного задания можете найти по ссылке - <a href="https://drive.google.com/drive/folders/1-O1FvxQU4MtUsvmQRGk-9NaRkDKSxJjM?usp=sharing">Задание тут</a></p>
+
+</div>
+</body>
+</html>
