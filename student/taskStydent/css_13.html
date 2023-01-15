@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="taskCss/lesStyle.css">
+</head>
+<body>
+   
+  <!-- <section class="project-container"> -->
+<div class="project-container">
+  
+  <h2>Градиент </h2>
+  <p>CSS-градиент представляет собой переходы от одного цвета к другому.
+  </p>
+  <p>Градиенты создаются с помощью функций <p>linear-gradient()</p> и <b>radial-gradient()</b>.
+    Градиентный фон можно устанавливать в свойствах background, background-image, border-imageи list-style-image.
+  </p>
+  <p>Линейный градиент создается с помощью двух и более цветов, для которых задано направление, или <b>линия градиента</b>. Линия градиента по умолчанию 180 градусов.
+    Если направление не указано, используется значение по умолчанию <b>—сверху-вниз</b>.
+    Цвета градиента по умолчанию распределяются равномерно.
+  </p>
+  <p>Общий вид функции linear-gradient(), в скобках значения пишутся черех запятую: 
+   <b> background: linear-gradient</b> (угол / ключевое слово которое определяет направление, первый цвет, второй цвет и т.д.);</p>
+  
+  <p><b>Направление</b> градиента может быть задано двумя способами, направление нужно задавать для того чтобы направить цвета в нужную сторону:
+  </p>
+  <ul style="list-style: none;">
+    <li><b>с помощью угла наклона</b> в градусах deg, значение которого определяет угол наклона линии внутри элемента.</li>
+    <br>
+    <li><b>с помощью ключевых слов</b> to top, to right, to bottom, to left, которые соответствуют углу градиента, равному 0deg, 90deg, 180deg и 270deg соответственно. Ключевые слова говорят о том в какую сторону цвета будут переливаться начиная от первого цвета к последнему.
+    </li>
+  </ul>
+  <table border="1">
+    <tr>
+      <td colspan="2">Пример</td>
+    </tr>
+    <tr>
+      <td>Задание  направления градиента с помощью градусов </td>
+      <td>Здание направления с помощью ключевого слова</td>
+    </tr>
+    <tr>
+      <td>
+        <div class="code_container">
+          <ol class="code_list">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+               
+          </ol>
+            <ul class="list_nontype">
+              <li><span class="sel">div</span>{</li>
+              <li><span class="property">width:</span><span class="value">200</span><span class="px">px</span>;</li>
+              <li><span class="property">height:</span><span class="value">100</span><span class="px">px</span>;</li>
+              <li><span class="property">background:linear-gradient</span>(<span class="value">60</span><span class="px">deg,</span><span class="property">red, blue</span> );</li>
+              <li>}</li>
+              
+                
+          </ul>
+        </div>
+      </td>
+      <td>
+        <div class="code_container">
+          <ol class="code_list">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+               
+          </ol>
+            <ul class="list_nontype">
+              <li><span class="sel">div</span>{</li>
+              <li><span class="property">width:</span><span class="value">200</span><span class="px">px</span>;</li>
+              <li><span class="property">height:</span><span class="value">100</span><span class="px">px</span>;</li>
+              <li><span class="property">background:linear-gradient</span>(<span class="px">to</span><span> left</span><span class="property">red, blue</span> );</li>
+              <li>}</li>
+              
+                
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div style="width: 100%;height: 100px;background: linear-gradient(60deg, red, blue)"></div>
+      </td>
+      <td>
+        <div style="width: 100%;height: 100px;background: linear-gradient(to left, red, blue)"></div>
+      </td>
+    </tr>
+  </table>
+  <p>Для неравномерного распределения цветов указывается начальная позиция каждого цвета через точки остановки градиента, так называемые <b>color stops</b>. <i>Точки остановки</i> задаются в %, где 0% — начальная точка, 100% — конечная точка. Точки остановки нужны для того чтобы сказать сколько процентов будет занимать выбранный вами цвет. </p>
+  <table border="1">
+    
+    <tr>
+      <td>
+        <div class="code_container">
+          <ol class="code_list">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+               
+          </ol>
+            <ul class="list_nontype">
+              <li><span class="sel">div</span>{</li>
+              <li><span class="property">width:</span><span class="value">200</span><span class="px">px</span>;</li>
+              <li><span class="property">height:</span><span class="value">100</span><span class="px">px</span>;</li>
+              <li><span class="property">background:linear-gradient</span>(to top,<span class="blue"> red</span><span class="px"> 30%,</span>, <span class="blue">yellow</span><span class="px"> 60%</span>,<span class="blue"> blue</span><span class="px">70%</span> );</li>
+              <li>}</li>
+              
+                
+          </ul>
+        </div>
+      </td>
+      
+    </tr>
+    <tr>
+      <td>
+        <div style="width: 100%;height: 100px;background: linear-gradient(to top, red 30%,yellow 60%, blue 70%)"></div>
+      </td>
+     
+    </tr>
+  </table>  
+  <p>Для четкого распределения цветных полос каждый последующий цвет нужно начинать с точки остановки предыдущего цвета:</p>
+  <table border="1">
+    
+    <tr>
+      <td>
+        <div class="code_container">
+          <ol class="code_list">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+               
+          </ol>
+            <ul class="list_nontype">
+              <li><span class="sel">div</span>{</li>
+              <li><span class="property">width:</span><span class="value">200</span><span class="px">px</span>;</li>
+              <li><span class="property">height:</span><span class="value">100</span><span class="px">px</span>;</li>
+              <li><span class="property">background:linear-gradient</span>(<span>to right,</span><span class="blue"> red</span><span class="px"> 35%, </span><span class="blue">white</span><span class="px"> 35% 70%</span>,<span class="blue"> blue</span><span class="px"> 70%</span> );</li>
+              <li>}</li>
+              
+                
+          </ul>
+        </div>
+      </td>
+      
+    </tr>
+    <tr>
+      <td>
+        <div style="width: 100%;height: 100px;background: linear-gradient(to right, red 35%,white 35%,70%, blue 70%)"></div>
+      </td>
+     
+    </tr>
+  </table>
+  <p><b>Радиальный градиент</b> отличается от линейного тем, что цвета выходят из одной точки (центра градиента) и равномерно распределяются наружу, рисуя форму круга или эллипса.</p>
+  <p><b>background: radial-gradient</b>(форма градиента / размер / позиция центра, первый цвет, второй цвет и т.д.);
+  </p>
+  <p><b>Форма градиента</b> определяется ключевыми словами circle или ellipse. Если форма не задана, по умолчанию радиальный градиент принимает форму эллипса.</p>
+  <img src="taskCssImg/css_131.jpg" alt="">
+  <p><b>Размер градиента</b> задается с помощью пары значений в px, em или %. Размер можно задать только для градиента со значением ellipse.  </p>
+  <img src="taskCssImg/css_132.jpg" alt="">
+  <p><b>Позиция центра</b> задаётся с помощью ключевых слов, используемых в свойстве background-position, с добавлением приставки at. Если позиция центра не задана, используется значение по умолчанию at center.   Как и в background-position позицию центра можно задавать при помощи px и %</p>
+  <img src="taskCssImg/css_133.jpg" alt="">
+  <h2>Повтор градиента </h2>
+  <p>В добавление к линейному и радиальному градиентам существует повтор градиента, который задается с помощью функций repeating-linear-gradient() и repeating-radial-gradient() соответственно. Фон из повторяющихся градиентов выглядит неаккуратно, поэтому рекомендуется начинать следующий цвет с точки остановки предыдущего, создавая таким образом полосатые узоры.</p>
+  <img src="taskCssImg/css_134.jpg" alt="">
+  <br>
+  <br>
+  <img src="taskCssImg/css_135.jpg" alt="">
+
+  </div>
+
+  </body>
+  </html>
+</body>
+</html>

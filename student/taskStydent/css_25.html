@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="taskCss/lesStyle.css">
+</head>
+<body>
+  
+  <!-- <section class="project-container"> -->
+<div class="project-container">
+  
+
+<h2>Работа со свойством transition </h2>
+<p>Переходы CSS позволяют изменять значения свойств плавно (от одного значения к другому) за заданную длительность.</p>
+<p>Свойства которые применяются для создания переходов в CSS:</p>
+<p><font color="#F44747">transition-delay:</font> s ; - указывает задержку в секундах для эффекта перехода<br>
+ <font color="#F44747"> transition-duration:</font> s; - указывает сколько секунд должен длятся переходит<br>
+  <font color="#F44747">transition-property:</font> название свойства; - указывает имя свойства CSS, для которого используется эффект перехода. Значение all стоит по умолчанию. <br>
+  <font color="#F44747">transition-timing-function:</font> ease; - задает эффект перехода с медленным запуском, затем быстро, затем закончится медленно</p>
+<p><font color="F44747">linear </font> - задает эффект перехода с одинаковой скоростью от начала до конца <br>
+  <font color="F44747">ease-in</font> - задает эффект перехода с медленным запуском <br>
+  <font color="F44747">ease-out</font> - задает эффект перехода с медленным концом <br>
+  <font color="F44747">ease-in-out</font> - задает эффект перехода с медленным запуском и концом<br>
+
+</p>
+<p><font color="F44747">transition:</font> название свойства | длительность | эффект перехода | задержка; - универсальное свойство которое включает в себя сразу все свойства которые применяются для создания эффекта перехода </p>
+<p>Эффект перехода срабатывает между двумя состояниями элемента, они могут быть определены с помощью псевдокласса :hover и :active. </p>
+<p>Пример <br>
+  В следующем примере показан элемент 100px * 100px Red <div>. Элемент <div> также указал эффект перехода для свойства Width с длительностью 2 секунды:
+
+</p>
+
+<div class="code_container">
+  <ol class="code_list">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+
+
+  </ol>
+  <ul class="list_nontype">
+    <li><span class="sel">div</span><span  class='pseudo'></span>{</li>
+    <li><span class="property">width:</span><span class="value">100</span><span class="px">px</span>;</li>
+    <li><span class="property">height:</span><span class="value">100</span><span class="px">px</span>;</li>
+    <li><span class="property">background:</span><span class="blue">red</span>;</li>
+    <li><span class="property">-webkit-transition:</span><span class="blue" > width </span><span class="value">2</span>s; <span class="comment">/*Safati*/</span></li>
+    <li><span class="property">transition:</span><span class="blue" > width </span><span class="value">2</span>s;</li>
+  
+    <li>}</li>
+
+</ul>
+
+  
+</div>
+
+<p>Теперь давайте укажем новое значение свойства Width, когда пользователь наносит указатель мыши на элемент div:</p>
+  <div class="code_container">
+    <ol class="code_list">
+      <li></li>
+      <li></li>
+      <li></li>
+     
+
+ 
+    </ol>
+      <ul class="list_nontype">
+        <li><span class="sel">div</span><span  class='pseudo'>:hover</span>{</li>
+        <li><span class="property">width:</span><span class="value">300</span><span class="px">px</span>;</li>
+        
+        <li>}</li>
+   
+    </ul>
+  </div>
+  <p>Попробуйте вставьте этот код к себе в редактор и посмотрите на эффект. Красный квадрат в течении 2 секунд будет увеличиваться с ширины 100px до 300px</p>
+
+  <p>Пример <br> В данном примере мы заданим эффект перехода одновременно для свойства Width и Height с длительностью в 2 секунды для ширины и 4 секунды для высоты</p>
+<!-- 2 -->
+<div class="code_container">
+  <ol class="code_list">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+
+
+
+  </ol>
+  <ul class="list_nontype">
+    <li><span class="sel">div</span><span  class='pseudo'></span>{</li>
+    <li><span class="property">width:</span><span class="value">100</span><span class="px">px</span>;</li>
+    <li><span class="property">height:</span><span class="value">100</span><span class="px">px</span>;</li>
+    <li><span class="property">background:</span><span class="blue">red</span>;</li>
+    <li><span class="property">-webkit-transition:</span><span class="blue" > width </span><span class="value">2</span>s, <span class="blue">height</span><span class="value">4</span>s;</li>
+    <li><span class="property">transition:</span><span class="blue" > width </span><span class="value">2</span>s, <span class="blue">height</span><span class="value">4</span>s;</li>
+  
+    <li>}</li>
+
+</ul>
+</div>
+
+
+<p>При наведении ширина и высота будут стремиться к 300px </p>
+<div class="code_container">
+  <ol class="code_list">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+
+  </ol>
+    <ul class="list_nontype">
+      <li><span class="sel">div</span><span  class='pseudo'>:hover</span>{</li>
+      <li><span class="property">width:</span><span class="value">300</span><span class="px">px</span>;</li>
+      <li><span class="property">height:</span><span class="value">300</span><span class="px">px</span>;</li>
+      
+      <li>}</li>
+ 
+  </ul>
+</div>
+<p>Опробуйте данный код в редакторе. </p>
+
+<h3>Практика </h3>
+<p>Задание 1. <br>
+  Создайте синий квадрат шириной и высотой 100px. При наведении квадрат должен плавно увеличить ширину и высоту до 300px, а также сменить цвет на желтый. Задержку и время действия можете выбрать сами. 
+  </p>
+  <p>Задание 2 <br>
+    Создайте круг который будет плавно увеличиваться. Размер можете выбрать по своему усмотрению. 
+    </p>
+<p>
+  Задание 3 <br>
+Вернитесь к заданию где вы делали выпадающие менюшки и сделайте так чтобы выпадение происходило плавно. 
+
+</p>
+</div>
+</body>
+</html>

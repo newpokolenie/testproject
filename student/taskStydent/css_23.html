@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="taskCss/lesStyle.css">
+</head>
+<body>
+  
+  <!-- <section class="project-container"> -->
+<div class="project-container">
+  
+
+<h2>Свойство для элементов CSS Grid </h2>
+<h2>Grid-column-start, grid-column-end, grid-column </h2>
+<p>Grid-column-start – определяет с какого столбца будет начинаться элемент
+  Grid-column-end – определяет на каком столбце завершиться элемент 
+  Стоит заметить что элементы считают до какого столбца они будут идти по граням. </p>
+<p>Схематическое отображение совместной работы свойств grid-column-start и grid-column-end </p>
+<img src="taskCssImg/css_231.jpg" alt="">
+<p>Свойство grid-column позволяет объединить два свойства grid-column-start и grid-column-end </p>
+<p>Синтаксис: <br> grid-column: grid-column-start / grid-column-end – сначала пишется с какой грани ячейка будет начинаться и через слеш пишется где ячейка закончиться. </p>
+<p>Значения которые принимают данные свойства: </p>
+<ul style="list-style: none;">
+  <li>auto - Ключевое слово, указывающее, что свойство не влияет на размещение элемента в макете сетки (автоматическое размещение, автоматический диапазон или диапазон по умолчанию равный 1). <font color="#F44747">Является значением по умолчанию.</font></li>
+  <li>Line - Целое число, которое соответствует начальной грани элемента в макете сетки (отсчет граней ведется слева направо от левого края элемента, схематичное отображение вверху страницы). Если задано отрицательное целое число, то отсчет ведется в обратном порядке, начиная с конечного края явной сетки макета. <font color="#F44747">Значение 0 недопустимо</font>.</li>
+  <li>Span line - Ключевое слово span с целым числом, которое определяет какое количество столбцов сетки элемент будет охватывать. <font color="#F44747">Если целое число опущено, то по умолчанию используется значение 1. Отрицательные значения или значение 0 недопустимы</font>.</li>
+</ul>
+<span ><font color=""></font></span>
+<div class="code_container">
+  <ol class="code_list">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    
+
+     
+  </ol>
+  <pre style="margin: 0;">
+  <code id="htmlViewer" style="color:rgb(220, 220, 220); font-weight:400;background-color:rgb(30, 30, 30);background:rgb(0, 0, 0);display:block;padding: 0px 10px; border-radius:10px"><span style="color:rgb(155, 155, 155); font-weight:400;">&lt;<span style="color:rgb(86, 156, 214); font-weight:400;">div</span> <span style="color:rgb(156, 220, 254); font-weight:400;">id</span>=<span style="color:rgb(214, 157, 133); font-weight:400;">&quot;grid&quot;</span>&gt;</span>
+  <span style="color:rgb(155, 155, 155); font-weight:400;">&lt;<span style="color:rgb(86, 156, 214); font-weight:400;">div</span> <span style="color:rgb(156, 220, 254); font-weight:400;">class</span>=<span style="color:rgb(214, 157, 133); font-weight:400;">&quot;item&quot;</span>&gt;</span>Ячейка1<span style="color:rgb(155, 155, 155); font-weight:400;">&lt;/<span style="color:rgb(86, 156, 214); font-weight:400;">div</span>&gt;</span>
+  <span style="color:rgb(155, 155, 155); font-weight:400;">&lt;<span style="color:rgb(86, 156, 214); font-weight:400;">div</span> <span style="color:rgb(156, 220, 254); font-weight:400;">class</span>=<span style="color:rgb(214, 157, 133); font-weight:400;">&quot;item&quot;</span>&gt;</span>Ячейка2<span style="color:rgb(155, 155, 155); font-weight:400;">&lt;/<span style="color:rgb(86, 156, 214); font-weight:400;">div</span>&gt;</span>
+  <span style="color:rgb(155, 155, 155); font-weight:400;">&lt;<span style="color:rgb(86, 156, 214); font-weight:400;">div</span> <span style="color:rgb(156, 220, 254); font-weight:400;">class</span>=<span style="color:rgb(214, 157, 133); font-weight:400;">&quot;item&quot;</span>&gt;</span>Ячейка3<span style="color:rgb(155, 155, 155); font-weight:400;">&lt;/<span style="color:rgb(86, 156, 214); font-weight:400;">div</span>&gt;</span>
+  <span style="color:rgb(155, 155, 155); font-weight:400;">&lt;<span style="color:rgb(86, 156, 214); font-weight:400;">div</span> <span style="color:rgb(156, 220, 254); font-weight:400;">class</span>=<span style="color:rgb(214, 157, 133); font-weight:400;">&quot;item&quot;</span>&gt;</span>Ячейка4<span style="color:rgb(155, 155, 155); font-weight:400;">&lt;/<span style="color:rgb(86, 156, 214); font-weight:400;">div</span>&gt;</span>
+  <span style="color:rgb(155, 155, 155); font-weight:400;">&lt;<span style="color:rgb(86, 156, 214); font-weight:400;">div</span> <span style="color:rgb(156, 220, 254); font-weight:400;">class</span>=<span style="color:rgb(214, 157, 133); font-weight:400;">&quot;item&quot;</span>&gt;</span>Ячейка5<span style="color:rgb(155, 155, 155); font-weight:400;">&lt;/<span style="color:rgb(86, 156, 214); font-weight:400;">div</span>&gt;</span>
+  <span style="color:rgb(155, 155, 155); font-weight:400;">&lt;<span style="color:rgb(86, 156, 214); font-weight:400;">div</span> <span style="color:rgb(156, 220, 254); font-weight:400;">class</span>=<span style="color:rgb(214, 157, 133); font-weight:400;">&quot;item&quot;</span>&gt;</span>Ячейка6<span style="color:rgb(155, 155, 155); font-weight:400;">&lt;/<span style="color:rgb(86, 156, 214); font-weight:400;">div</span>&gt;</span>
+
+<span style="color:rgb(155, 155, 155); font-weight:400;">&lt;/<span style="color:rgb(86, 156, 214); font-weight:400;">div</span>&gt;</span>
+</code></pre>
+</div>
+<br>
+
+<div class="code_container">
+  <ol class="code_list">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+
+     
+  </ol>
+    <ul class="list_nontype">
+      <li><span class="className">#grid</span>{</li>
+      <li><span class="property">max-width:</span><span class="value">400</span><span class="px">px</span>;</li>
+      <li><span class="property">height:</span><span class="value">300</span><span class="px">px</span>;</li>
+      <li><span class="property">display:</span><span class="blue">grid</span>;</li>
+      <li><span class="property">border:</span><span class="value">1</span><span class="px">px </span><span class="blue">solid black</span>;</li>
+      <li><span class="property">width:</span><span class="value">100</span><span class="px">%</span>;</li>
+      <li><span class="property">grid-template:</span><span class="blue">repeat</span>(<span class="value">2</span>,<span class="blue"> auto</span>)/<span class="blue">repeat</span>(<span class="value">3</span>,<span class="blue"> auto</span>;</li>
+      <li>}</li>
+
+      <li><span class="className">.item</span>{</li>
+      <li><span class="property">background-color:</span><span class="blue">lime</span>;</li>
+      <li><span class="property">border:</span><span class="value">1</span><span class="px">px </span><span class="blue">solid black</span>;</li>
+      <li><span class="property">padding:</span><span class="value">10</span><span class="px">px</span>;</li>
+      <li>}</li>
+
+      <li><span class="className">.item1</span>{</li>
+      <li><span class="property">grid-column:</span><span class="value">1</span>/ span <span class="value">3</span>;</li>
+      <li>}</li>
+
+      <li><span class="className">.item2</span>{</li>
+      <li><span class="property">grid-column:</span><span class="value">1</span>/ span <span class="value">3</span>;</li>
+      <li>}</li>
+        
+  </ul>
+</div>
+
+<h3>Результат</h3>
+<img src="taskCssImg/css_232.jpg" alt="">
+<p>В данном примере мы сделали так чтобы первая ячейка начиналась с первой грани и занимала ширину как 3 ячейки, 2 ячейка начинается со 2й грани и заканчивается на 3й.</p>
+<h2>Grid-row-start, grid-row-end, grid-row </h2>
+<p>Grid-row-start – определяет на какой строке начинается элемент в макете сетки <br>
+  Grid-row-end – определяется на какой строке будет заканчиваться элемент в макете сетки. 
+  Отсчет также начинается по граням, только если для grid-column отсчет граней идет по горизонтали, то для grid-row отсчет идет по вертикали. 
+  Grid-row – сокращенное свойство которое объединяет в себе свойства grid-row-strt и grid-row-end. <br>
+  Значения для этих свойств такие же как и для grid-column. </p>
+  <div class="code_container">
+    <ol class="code_list">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      
+      
+       
+    </ol>
+      
+  <pre style="margin: -3px 0 0 0 ;">
+  <code id="htmlViewer" style="color:rgb(220, 220, 220); font-weight:400;background-color:rgb(30, 30, 30);background:rgb(0, 0, 0);display:block;padding: 0px 10px; border-radius:10px;"><span style="color:rgb(155, 155, 155); font-weight:400;">&lt;<span style="color:rgb(86, 156, 214); font-weight:400;">div</span> <span style="color:rgb(156, 220, 254); font-weight:400;">id</span>=<span style="color:rgb(214, 157, 133); font-weight:400;">&quot;grid&quot;</span>&gt;</span>
+  <span style="color:rgb(155, 155, 155); font-weight:400;">&lt;<span style="color:rgb(86, 156, 214); font-weight:400;">div</span> <span style="color:rgb(156, 220, 254); font-weight:400;">class</span>=<span style="color:rgb(214, 157, 133); font-weight:400;">&quot;item item1&quot;</span>&gt;</span>Ячейка1<span style="color:rgb(155, 155, 155); font-weight:400;">&lt;/<span style="color:rgb(86, 156, 214); font-weight:400;">div</span>&gt;</span>
+  <span style="color:rgb(155, 155, 155); font-weight:400;">&lt;<span style="color:rgb(86, 156, 214); font-weight:400;">div</span> <span style="color:rgb(156, 220, 254); font-weight:400;">class</span>=<span style="color:rgb(214, 157, 133); font-weight:400;">&quot;item item2&quot;</span>&gt;</span>Ячейка2<span style="color:rgb(155, 155, 155); font-weight:400;">&lt;/<span style="color:rgb(86, 156, 214); font-weight:400;">div</span>&gt;</span>
+  <span style="color:rgb(155, 155, 155); font-weight:400;">&lt;<span style="color:rgb(86, 156, 214); font-weight:400;">div</span> <span style="color:rgb(156, 220, 254); font-weight:400;">class</span>=<span style="color:rgb(214, 157, 133); font-weight:400;">&quot;item&quot;</span>&gt;</span>Ячейка3<span style="color:rgb(155, 155, 155); font-weight:400;">&lt;/<span style="color:rgb(86, 156, 214); font-weight:400;">div</span>&gt;</span>
+  <span style="color:rgb(155, 155, 155); font-weight:400;">&lt;<span style="color:rgb(86, 156, 214); font-weight:400;">div</span> <span style="color:rgb(156, 220, 254); font-weight:400;">class</span>=<span style="color:rgb(214, 157, 133); font-weight:400;">&quot;item&quot;</span>&gt;</span>Ячейка4<span style="color:rgb(155, 155, 155); font-weight:400;">&lt;/<span style="color:rgb(86, 156, 214); font-weight:400;">div</span>&gt;</span>
+  <span style="color:rgb(155, 155, 155); font-weight:400;">&lt;<span style="color:rgb(86, 156, 214); font-weight:400;">div</span> <span style="color:rgb(156, 220, 254); font-weight:400;">class</span>=<span style="color:rgb(214, 157, 133); font-weight:400;">&quot;item item5&quot;</span>&gt;</span>Ячейка5<span style="color:rgb(155, 155, 155); font-weight:400;">&lt;/<span style="color:rgb(86, 156, 214); font-weight:400;">div</span>&gt;</span>
+  <span style="color:rgb(155, 155, 155); font-weight:400;">&lt;<span style="color:rgb(86, 156, 214); font-weight:400;">div</span> <span style="color:rgb(156, 220, 254); font-weight:400;">class</span>=<span style="color:rgb(214, 157, 133); font-weight:400;">&quot;item&quot;</span>&gt;</span>Ячейка6<span style="color:rgb(155, 155, 155); font-weight:400;">&lt;/<span style="color:rgb(86, 156, 214); font-weight:400;">div</span>&gt;</span>
+<span style="color:rgb(155, 155, 155); font-weight:400;">&lt;/<span style="color:rgb(86, 156, 214); font-weight:400;">div</span>&gt;</span>
+  </code>
+  </pre>
+          
+ 
+</div>
+<br>
+<div class="code_container">
+  <ol class="code_list">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+
+     
+  </ol>
+    <ul class="list_nontype">
+      <li><span class="className">#grid</span>{</li>
+      <li><span class="property">max-width:</span><span class="value">400</span><span class="px">px</span>;</li>
+      <li><span class="property">height:</span><span class="value">300</span><span class="px">px</span>;</li>
+      <li><span class="property">display:</span><span class="blue">grid</span>;</li>
+      <li><span class="property">border:</span><span class="value">1</span><span class="px">px </span><span class="blue">solid black</span>;</li>
+      <li><span class="property">width:</span><span class="value">100</span><span class="px">%</span>;</li>
+      <li><span class="property">grid-template:</span><span class="blue">repeat</span>(<span class="value">2</span>,<span class="blue"> auto</span>)/<span class="blue">repeat</span>(<span class="value">3</span>,<span class="blue"> auto</span>;</li>
+      <li>}</li>
+
+      <li><span class="className">.item</span>{</li>
+      <li><span class="property">background-color:</span><span class="blue">lime</span>;</li>
+      <li><span class="property">border:</span><span class="value">1</span><span class="px">px </span><span class="blue">solid black</span>;</li>
+      <li><span class="property">padding:</span><span class="value">10</span><span class="px">px</span>;</li>
+      <li>}</li>
+
+      <li><span class="className">.item1</span>{</li>
+      <li><span class="property">grid-row:</span><span class="value">1</span>/<span class="value">3</span>;</li>
+      <li>}</li>
+
+      <li><span class="className">.item2</span>{</li>
+      <li><span class="property">grid-row:</span><span class="value">2</span>/<span class="value">3</span>;</li>
+      <li>}</li>
+
+      <li><span class="className">.item5</span>{</li>
+        <li><span class="property">grid-row:</span><span class="value">2</span>/<span class="value">4</span>;</li>
+        <li>}</li>
+        
+  </ul>
+</div>
+<h3>Результат</h3>
+<img src="taskCssImg/css_233.jpg" alt="">
+
+<p>В данном примере первая ячейка начинается с первой грани и заканчивается на 3й, вторая ячейка начинается со второй грани и заканчивается на 3й,  как видим вторая ячейка переместилась, 5я чейка начинается со 2й грани и заканчивается на 4й. </p>
+
+
+
+<img src="taskCssImg/css_234.jpg" alt="">
+<h3>Задание 3 </h3>
+<p>Используя grid сверстайте данный макет: <a href="https://drive.google.com/drive/folders/1BEZG8Tsdct4dZoIwOyv7EQ7WuaZ8IFoh?usp=sharing">Кликни на меня</a></p>
+
+</div>
+</body>
+</html>

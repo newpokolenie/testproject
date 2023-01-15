@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тени, прозрачность</title>
+  <link rel="stylesheet" href="taskCss/lesStyle.css">
+</head>
+<body>
+   
+  <!-- <section class="project-container"> -->
+<div class="project-container">
+  
+  <h2>Тени, прозрачность</h2>
+  <p>С помощью CSS можно добавить тень к тексту и к элементам.
+  </p>
+ 
+  <p>Свойство CSS <font color="#DC143C">text-shadow</font> применяет тень к тексту.
+  </p>
+  <p>Общий вид свойства text-shadow: 
+  </p>
+  <ul>
+    <li>text-shadow: смещение по x | смещение по y | радиус размытия | цвет; </li>
+  </ul>
+  
+  <p>Радиус размытия задавать не обязательно. </p>
+ 
+  <table border="1">
+    
+    <tr>
+      <td>
+        <div class="code_container">
+          <ol class="code_list">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+           
+               
+          </ol>
+            <ul class="list_nontype">
+              <li><span class="sel">div</span>{</li>
+              <li><span class="property">font-sze:</span><span class="value">30</span><span class="px">px</span>;</li>
+              <li><span class="property">text-shadow:</span><span class="value">3</span><span class="px">px </span><span class="value">3</span><span class="px">px </span><span class="blue">red</span>;</li>
+              
+              <li>}</li>
+              
+                
+          </ul>
+        </div>
+      </td>
+      <td>
+        <div class="code_container">
+          <ol class="code_list">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+           
+               
+          </ol>
+            <ul class="list_nontype">
+              <li><span class="sel">div</span>{</li>
+              <li><span class="property">font-sze:</span><span class="value">30</span><span class="px">px</span>;</li>
+              <li><span class="property">text-shadow:</span><span class="value">3</span><span class="px">px </span><span class="value">3</span><span class="px">px </span><span class="value">5</span><span class="px">px</span>  <span class="blue">red</span>;</li>
+              
+              <li>}</li>
+              
+                
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span>Без размытия</span>
+        <div style="text-shadow:3px 3px red;">Новое поколение</div>
+      </td>
+      <td>
+        <span>C размытия</span>
+        <div style="text-shadow:3px 3px 5px red;">Новое поколение</div>
+      </td>
+    </tr>
+  </table>  
+  <p>Можно задать несколько теней для текста через запятую</p>
+  <table border="1">
+    
+    <tr>
+      <td>
+        <div class="code_container">
+          <ol class="code_list">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+       
+     
+           
+               
+          </ol>
+            <ul class="list_nontype">
+              <li><span class="sel">div</span>{</li>
+              <li><span class="property">font-sze:</span><span class="value">30</span><span class="px">px</span>;</li>
+              <li><span class="property">text-shadow:</span><span class="value">3</span><span class="px">px </span><span class="value">3</span><span class="px">px </span><span class="value">5</span><span class="px">px </span><span class="blue"> red</span>, <span class="value">3</span><span class="px">px </span><span class="blue">blue</span>;</li>
+              
+              <li>}</li>
+              
+                
+          </ul>
+        </div>
+      </td>
+
+    </tr>
+    <tr>
+      <td>
+        <div style="text-shadow:3px 3px 5px red, 3px 4px blue">Новое поколение</div>
+        <span>Как видите у нас получилось и задать размытие и добавить тень к тексту
+        </span>
+
+      </td>
+    </tr>
+  </table>
+  <p>С помощью свойства text-shadow можно создать границу для текста
+  </p>
+  <table border="1">
+    
+    <tr>
+      <td>
+        <div class="code_container">
+          <ol class="code_list">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+   
+           
+               
+          </ol>
+            <ul class="list_nontype">
+              <li><span class="sel">div</span>{</li>
+              <li><span class="property">font-sze:</span><span class="value">30</span><span class="px">px</span>;</li>
+              <li><span class="property">color:</span><span class="blue">yello</span></li>
+              <li><span class="property">text-shadow:</span><span class="value">-1</span><span class="px">px </span><span class="value">0</span><span class="blue"> black</span>, <span class="value">0 </span><span class="value">1</span><span class="px">px </span><span class="blue">black</span>, <span class="value">1</span><span class="px">px </span><span class="value">0 </span><span class="blue">black</span>, <span class="value">0</span>
+                <span class="value">-1</span><span class="px">px </span><span class="blue"> black</span>;</li>
+              
+              <li>}</li>
+              
+                
+          </ul>
+        </div>
+      </td>
+
+    </tr>
+    <tr>
+      <td>
+        <div style="text-shadow:-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; color: yellow;">Новое поколение</div>
+        <span>Первая тень создает границу слева, вторая снизу, треться справа, четвертая сверху
+        </span>
+
+      </td>
+    </tr>
+  </table>
+  <p>Свойство CSS <font color="#DC143C">box-shadow</font> применяет тень к элементам.</p>
+  <p>Общий вид свойства text-shadow: </p>
+  <ul style="list-style: none;">
+    <li><font color="#DC143C">box-shadow</font>: смещение по x | смещение по y | радиус размытия |радиус распространения | цвет; 
+    </li>
+  </ul>
+  <p>Радиус распространения отвечает за то насколько тень будет сильно распространяться от элемента. Положительные значения увеличивают тень, отрицательные сжимают.</p>
+  
+  <img src="taskCssImg/css_144.jpg" alt="">
+
+  <h2>Прозрачность элементов CSS </h2>
+  <h2>1. Свойство opacity</h2>
+  <p>Свойство opacity позволяет сделать любой элемент веб-страницы частично или полностью прозрачным. Данное свойство изменяет прозрачность элементов, для которых установлено фоновое изображение (картинка) или задан фон с помощью цвета или градиента. </p>
+  <p>Если элемент, для которого применено свойство opacity, содержит внутри себя другие элементы, то они также изменят свою прозрачность.
+    Свойство opacity принимает значения в диапазоне от 0 (полностью прозрачный) до 1 (непрозрачный), например:</p>
+
+  <img src="taskCssImg/css_145.jpg" alt="">
+  <h2>2. Функция rgba()</h2>
+  <p>Цветовая модель RGBA создает цветовой оттенок путем смешивания в необходимых пропорциях <b>красного (Red), зеленого (Green) и синего (Blue)</b> цветов, а <b>альфа-канал (Alpha)</b> отвечает за степень прозрачности цвета. В отличие от свойства opacity, для блока, содержащего другие элементы, функция rgba() изменит прозрачность только блока.</p>
+  <img src="taskCssImg/css_146.jpg" alt="">
+  <img src="taskCssImg/css_147.jpg" alt="">
+
+
+
+
+</div>
+
+</body>
+</html>
