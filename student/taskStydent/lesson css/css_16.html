@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="taskCss/lesStyle.css">
+</head>
+<body>
+  
+  <!-- <section class="project-container"> -->
+<div class="project-container">
+  
+<h2>Стилизация форм css</h2>
+<p>Приложения получают данные от пользователей, в основном, через формы. Возьмем для примера обычную форму регистрации. Там всегда будет несколько полей, куда пользователь может ввести нужную информацию (свое имя, email и т.д.).</p>
+<p>Раньше на сайтах были простые, скучные HTML-формы без всякой стилизации. Но с появлением CSS все изменилось. Благодаря новейшим свойствам CSS мы сейчас можем создавать куда более интересные и красивые формы.</p>
+<p>На иллюстрации ниже вы видите, как выглядит обычная HTML-форма без CSS.</p>
+
+<div>
+  <input type="text" placeholder="Name"><input type="text" placeholder="Email"><button>submit</button>
+  <p>А вот так выглядит та же форма, но уже с использованием css</p>
+  <input type="text" placeholder="Name" style="width: 60%; height: 30px; border-radius: 15px; padding: 5px; border:solid 1px darkgray"><br>
+  <br>
+  <input type="text" placeholder="Email" style="width:60%; height: 30px; border-radius: 15px; padding: 5px; border:solid 1px darkgray"><br>
+  <br>
+  <button style="width: 60%;height: 40px; border-radius: 15px;border: none; background: #0087F4;"><font color="white"><b>submit</b></font></button>
+
+</div>
+<p>Самый простой способ выбрать элементы ввода — использовать селекторы атрибутов. Селектор атрибутов задает css свойства для выбранного атрибута. </p>
+<p>Общий вид селектора атрибутов: </p>
+<ul style="list-style: none;">
+  <li>название тега <font color="green">[нужный атрибут]</font> { …  }</li>
+</ul>
+
+<pre>
+  <code id="htmlViewer" style="color:rgb(220, 220, 220); font-weight:400;background-color:rgb(30, 30, 30);background:rgb(0, 0, 0);display:block;padding: .5em;">Пример:
+ <span style="color:rgb(215, 186, 125); font-weight:400;">input</span><span style="color:rgb(215, 186, 125); font-weight:400;">[type=<span style="color:rgb(214, 157, 133); font-weight:400;">&quot;text&quot;</span>]</span>{
+ будет выбран элемент <span style="color:rgb(215, 186, 125); font-weight:400;">input</span> с атрибутом <span style="color:rgb(215, 186, 125); font-weight:400;">text</span>
+ }</code></pre>
+
+
+</div>
+<p>Этот селектор будет выбирать все элементы с данным атрибутом, если вам нужно выбрать отдельный  элемент, то следует использовать классы.
+  Селектор по атрибутам может включать в себя любой атрибут в html теге.</p>
+
+<p>Чтобы сделать текстовое поле более привлекательным, можно использовать следующие свойства CSS:</p>
+<ul style="list-style: none;">
+  <li>Padding (внутренние отступы)</li>
+  <li>Margin (внешние отступы) </li>
+  <li>Border (граница)</li>
+  <li>Box shadow (тень блока)</li>
+  <li>Border radius (для скругления границ)</li>
+  <li>Width (ширина)</li>
+  <li>Font (шрифт)</li>
+</ul>
+<h2>Стилизация чекбоксов и радиокнопок</h2>
+<p>Дефолтные чекбоксы и радиокнопки очень сложно стилизовать, для этого требуется более сложный CSS-код (и HTML — тоже).</p>
+<p>Для стилизации чекбокса используйте следующий HTML-код.</p>
+
+<pre>
+  <code id="htmlViewer" style="color:rgb(220, 220, 220); font-weight:400;background-color:rgb(240, 230, 230);background:rgb(0, 0, 0);display:block;padding: .5em;"><span style="color:rgb(155, 155, 155); font-weight:400;">&lt;<span style="color:rgb(86, 156, 214); font-weight:400;">label</span>&gt;</span>Name
+   <span style="color:rgb(155, 155, 155); font-weight:400;">&lt;<span style="color:rgb(86, 156, 214); font-weight:400;">input</span> <span style="color:rgb(156, 220, 254); font-weight:400;">type</span>=<span style="color:rgb(214, 157, 133); font-weight:400;">&quot;checbox&quot;</span>&gt;</span>
+   <span style="color:rgb(155, 155, 155); font-weight:400;">&lt;<span style="color:rgb(86, 156, 214); font-weight:400;">span</span>&gt;</span><span style="color:rgb(155, 155, 155); font-weight:400;">&lt;/<span style="color:rgb(86, 156, 214); font-weight:400;">span</span>&gt;</span>
+ <span style="color:rgb(155, 155, 155); font-weight:400;">&lt;/<span style="color:rgb(86, 156, 214); font-weight:400;">label</span>&gt;</span></code></pre>
+
+ <p>Поскольку мы используем label в качестве обертки для input, если вы кликнете на любой элемент внутри label, «кликнутым» будет input.</p>
+ <ul style="list-style: none;">
+  <li>Мы спрячем input, потому что браузеры практически не позволяют нам его модифицировать.</li>
+  <li>span создает пользовательский чекбокс.</li>
+  <li>Чтобы получить положение «отмечено» и стилизовать пользовательский чекбокс, мы будем использовать псевдокласс input:checked. Псевдокласс checked применяет css свойства тогда когда будет кликнут либо radiobutton, либо checkbox</li>
+</ul>
+  <p>Вот пользовательский чекбокс (комментарии в CSS-коде поясняют происходящее более подробно):</p>
+
+  <pre>
+    <code id="htmlViewer" style="color:rgb(220, 220, 220); font-weight:400;background-color:rgb(30, 30, 30);background:rgb(0, 0, 0);display:block;padding: .5em;"><span style="color:rgb(215, 186, 125); font-weight:400; width: 80%;">label</span> {
+     <span style="color:rgb(156, 220, 254); font-weight:400;">position</span>: relative; 
+     <span style="color:rgb(156, 220, 254); font-weight:400;">padding-left</span>:<span style="color:rgb(184, 215, 163); font-weight:400;">30px</span>; <span style="color:rgb(87, 166, 74); font-weight:400;">/* создает пустое пространство для кастомного чекбокса */</span>
+     <span style="color:rgb(156, 220, 254); font-weight:400;">cursor</span>: pointer;
+   }
+   <span style="color:rgb(87, 166, 74); font-weight:400;">/* скрывает стандартный чекбокс  */</span>
+   <span style="color:rgb(215, 186, 125); font-weight:400;">label</span> <span style="color:rgb(215, 186, 125); font-weight:400;">input</span><span style="color:rgb(215, 186, 125); font-weight:400;">[type=checkbox]</span> {
+     <span style="color:rgb(156, 220, 254); font-weight:400;">position</span>: absolute; 
+     <span style="color:rgb(87, 166, 74); font-weight:400;">/* скрытие элемента */</span>
+     <span style="color:rgb(156, 220, 254); font-weight:400;">opacity</span>: <span style="color:rgb(184, 215, 163); font-weight:400;">0</span>;
+     <span style="color:rgb(156, 220, 254); font-weight:400;">width</span>:<span style="color:rgb(184, 215, 163); font-weight:400;">0</span>; 
+     <span style="color:rgb(156, 220, 254); font-weight:400;">height</span>:<span style="color:rgb(184, 215, 163); font-weight:400;">0</span>;
+   }
+   <span style="color:rgb(87, 166, 74); font-weight:400;">/* кастомный чекбокс */</span>
+   <span style="color:rgb(215, 186, 125); font-weight:400;">label</span> <span style="color:rgb(215, 186, 125); font-weight:400;">span</span> {
+     <span style="color:rgb(156, 220, 254); font-weight:400;">position</span>: absolute;
+     <span style="color:rgb(87, 166, 74); font-weight:400;">/* позиционируем в пустое место label */</span>
+     <span style="color:rgb(156, 220, 254); font-weight:400;">top</span>:<span style="color:rgb(184, 215, 163); font-weight:400;">0</span>;
+     <span style="color:rgb(156, 220, 254); font-weight:400;">left</span>:<span style="color:rgb(184, 215, 163); font-weight:400;">0</span>;
+     <span style="color:rgb(156, 220, 254); font-weight:400;">width</span>:<span style="color:rgb(184, 215, 163); font-weight:400;">20px</span>; 
+     <span style="color:rgb(156, 220, 254); font-weight:400;">height</span>:<span style="color:rgb(184, 215, 163); font-weight:400;">20px</span>;
+     <span style="color:rgb(156, 220, 254); font-weight:400;">background-color</span>: <span style="color:rgb(184, 215, 163); font-weight:400;">#ddd</span>;
+     <span style="color:rgb(156, 220, 254); font-weight:400;">transition</span>: .<span style="color:rgb(184, 215, 163); font-weight:400;">3s</span> background-color; <span style="color:rgb(87, 166, 74); font-weight:400;">/* меняем задний фон анимировано*/</span>
+   }
+   <span style="color:rgb(87, 166, 74); font-weight:400;">/* иконка чекбокса */</span>
+   <span style="color:rgb(215, 186, 125); font-weight:400;">label</span> <span style="color:rgb(215, 186, 125); font-weight:400;">span</span>:after {
+     content: <span style="color:rgb(214, 157, 133); font-weight:400;">&quot;&quot;</span>;
+     <span style="color:rgb(156, 220, 254); font-weight:400;">position</span>: absolute;
+     <span style="color:rgb(156, 220, 254); font-weight:400;">display</span>: none;
+     
+     <span style="color:rgb(156, 220, 254); font-weight:400;">left</span>: <span style="color:rgb(184, 215, 163); font-weight:400;">6px</span>;
+     <span style="color:rgb(156, 220, 254); font-weight:400;">top</span>: <span style="color:rgb(184, 215, 163); font-weight:400;">2px</span>;
+     <span style="color:rgb(156, 220, 254); font-weight:400;">width</span>: <span style="color:rgb(184, 215, 163); font-weight:400;">4px</span>;
+     <span style="color:rgb(156, 220, 254); font-weight:400;">height</span>: <span style="color:rgb(184, 215, 163); font-weight:400;">10px</span>;
+     <span style="color:rgb(156, 220, 254); font-weight:400;">border</span>: solid white;
+     <span style="color:rgb(156, 220, 254); font-weight:400;">border-width</span>: <span style="color:rgb(184, 215, 163); font-weight:400;">0</span> <span style="color:rgb(184, 215, 163); font-weight:400;">3px</span> <span style="color:rgb(184, 215, 163); font-weight:400;">3px</span> <span style="color:rgb(184, 215, 163); font-weight:400;">0</span>;
+     <span style="color:rgb(156, 220, 254); font-weight:400;">transform</span>: <span style="color:rgb(78, 201, 176); font-weight:400;">rotate</span>(<span style="color:rgb(184, 215, 163); font-weight:400;">45deg</span>);
+   }
+   <span style="color:rgb(215, 186, 125); font-weight:400;">label</span><span style="color:rgb(215, 186, 125); font-weight:400;">:hover</span> <span style="color:rgb(215, 186, 125); font-weight:400;">span</span> {
+     <span style="color:rgb(156, 220, 254); font-weight:400;">background-color</span>: <span style="color:rgb(184, 215, 163); font-weight:400;">#ccc</span>;
+   }
+   
+   <span style="color:rgb(87, 166, 74); font-weight:400;">/**** Здесь происходит момент срабатывания ***/</span>
+   <span style="color:rgb(215, 186, 125); font-weight:400;">label</span> <span style="color:rgb(215, 186, 125); font-weight:400;">input</span><span style="color:rgb(215, 186, 125); font-weight:400;">:checked</span> ~ <span style="color:rgb(215, 186, 125); font-weight:400;">span</span> {
+     <span style="color:rgb(156, 220, 254); font-weight:400;">background-color</span>: <span style="color:rgb(184, 215, 163); font-weight:400;">#2eaadc</span>;
+   }
+   <span style="color:rgb(215, 186, 125); font-weight:400;">label</span> <span style="color:rgb(215, 186, 125); font-weight:400;">input</span><span style="color:rgb(215, 186, 125); font-weight:400;">:checked</span> ~ <span style="color:rgb(215, 186, 125); font-weight:400;">span</span>:after {
+     display:block;
+   }
+   </code></pre>
+
+   <p>В данном примере для срабатывания используется родственный селектор ~. Родственный селектор применяет css свойство для элемента который стоит рядом с ним. </p>
+   <p>Общий вид родственного селектора - селектор1 ~ селектор2 { ...}  </p>
+   <p>Так будет выглядеть сверстанный нами чекбокс</p>
+   <img src="taskCssImg/css_161.jpg" alt="">
+  <h2>Пользовательская радиокнопка</h2>
+  <pre>
+    <code id="htmlViewer" style="color:rgb(220, 220, 220); font-weight:400;background-color:rgb(30, 30, 30);background:rgb(0, 0, 0);display:block;padding: .5em;"><span style="color:rgb(215, 186, 125); font-weight:400;">label</span> {
+     <span style="color:rgb(156, 220, 254); font-weight:400;">position</span>: relative; 
+     <span style="color:rgb(156, 220, 254); font-weight:400;">padding-left</span>:<span style="color:rgb(184, 215, 163); font-weight:400;">30px</span>; <span style="color:rgb(87, 166, 74); font-weight:400;">/* создает пустое пространство для кастомного чекбокса */</span>
+     <span style="color:rgb(156, 220, 254); font-weight:400;">cursor</span>: pointer;
+   }
+   <span style="color:rgb(87, 166, 74); font-weight:400;">/* скрывает стандартный чекбокс  */</span>
+   <span style="color:rgb(215, 186, 125); font-weight:400;">label</span> <span style="color:rgb(215, 186, 125); font-weight:400;">input</span><span style="color:rgb(215, 186, 125); font-weight:400;">[type=checkbox]</span> {
+     <span style="color:rgb(156, 220, 254); font-weight:400;">position</span>: absolute; 
+     <span style="color:rgb(87, 166, 74); font-weight:400;">/* скрытие элемента */</span>
+     <span style="color:rgb(156, 220, 254); font-weight:400;">opacity</span>: <span style="color:rgb(184, 215, 163); font-weight:400;">0</span>;
+     <span style="color:rgb(156, 220, 254); font-weight:400;">width</span>:<span style="color:rgb(184, 215, 163); font-weight:400;">0</span>; 
+     <span style="color:rgb(156, 220, 254); font-weight:400;">height</span>:<span style="color:rgb(184, 215, 163); font-weight:400;">0</span>;
+   }
+   <span style="color:rgb(87, 166, 74); font-weight:400;">/* кастомный чекбокс */</span>
+   <span style="color:rgb(215, 186, 125); font-weight:400;">label</span> <span style="color:rgb(215, 186, 125); font-weight:400;">span</span> {
+     <span style="color:rgb(156, 220, 254); font-weight:400;">position</span>: absolute;
+     <span style="color:rgb(87, 166, 74); font-weight:400;">/* позиционируем в пустое место label */</span>
+     <span style="color:rgb(156, 220, 254); font-weight:400;">top</span>:<span style="color:rgb(184, 215, 163); font-weight:400;">0</span>;
+     <span style="color:rgb(156, 220, 254); font-weight:400;">left</span>:<span style="color:rgb(184, 215, 163); font-weight:400;">0</span>;
+     <span style="color:rgb(156, 220, 254); font-weight:400;">width</span>:<span style="color:rgb(184, 215, 163); font-weight:400;">20px</span>; 
+     <span style="color:rgb(156, 220, 254); font-weight:400;">height</span>:<span style="color:rgb(184, 215, 163); font-weight:400;">20px</span>;
+     <span style="color:rgb(156, 220, 254); font-weight:400;">background-color</span>: <span style="color:rgb(184, 215, 163); font-weight:400;">#ddd</span>;
+     <span style="color:rgb(156, 220, 254); font-weight:400;">transition</span>: .<span style="color:rgb(184, 215, 163); font-weight:400;">3s</span> background-color; <span style="color:rgb(87, 166, 74); font-weight:400;">/* меняем задний фон анимировано*/</span>
+   }
+   <span style="color:rgb(87, 166, 74); font-weight:400;">/* иконка чекбокса */</span>
+   <span style="color:rgb(215, 186, 125); font-weight:400;">label</span> <span style="color:rgb(215, 186, 125); font-weight:400;">span</span>:after {
+     content: <span style="color:rgb(214, 157, 133); font-weight:400;">&quot;&quot;</span>;
+     <span style="color:rgb(156, 220, 254); font-weight:400;">position</span>: absolute;
+     <span style="color:rgb(156, 220, 254); font-weight:400;">display</span>: none;
+     
+     <span style="color:rgb(156, 220, 254); font-weight:400;">left</span>: <span style="color:rgb(184, 215, 163); font-weight:400;">6px</span>;
+     <span style="color:rgb(156, 220, 254); font-weight:400;">top</span>: <span style="color:rgb(184, 215, 163); font-weight:400;">2px</span>;
+     <span style="color:rgb(156, 220, 254); font-weight:400;">width</span>: <span style="color:rgb(184, 215, 163); font-weight:400;">4px</span>;
+     <span style="color:rgb(156, 220, 254); font-weight:400;">height</span>: <span style="color:rgb(184, 215, 163); font-weight:400;">10px</span>;
+     <span style="color:rgb(156, 220, 254); font-weight:400;">border</span>: solid white;
+     <span style="color:rgb(156, 220, 254); font-weight:400;">border-width</span>: <span style="color:rgb(184, 215, 163); font-weight:400;">0</span> <span style="color:rgb(184, 215, 163); font-weight:400;">3px</span> <span style="color:rgb(184, 215, 163); font-weight:400;">3px</span> <span style="color:rgb(184, 215, 163); font-weight:400;">0</span>;
+     <span style="color:rgb(156, 220, 254); font-weight:400;">transform</span>: <span style="color:rgb(78, 201, 176); font-weight:400;">rotate</span>(<span style="color:rgb(184, 215, 163); font-weight:400;">45deg</span>);
+   }
+   <span style="color:rgb(215, 186, 125); font-weight:400;">label</span><span style="color:rgb(215, 186, 125); font-weight:400;">:hover</span> <span style="color:rgb(215, 186, 125); font-weight:400;">span</span> {
+     <span style="color:rgb(156, 220, 254); font-weight:400;">background-color</span>: <span style="color:rgb(184, 215, 163); font-weight:400;">#ccc</span>;
+   }
+   
+   <span style="color:rgb(87, 166, 74); font-weight:400;">/**** Здесь происходит момент срабатывания ***/</span>
+   <span style="color:rgb(215, 186, 125); font-weight:400;">label</span> <span style="color:rgb(215, 186, 125); font-weight:400;">input</span><span style="color:rgb(215, 186, 125); font-weight:400;">:checked</span> ~ <span style="color:rgb(215, 186, 125); font-weight:400;">span</span> {
+     <span style="color:rgb(156, 220, 254); font-weight:400;">background-color</span>: <span style="color:rgb(184, 215, 163); font-weight:400;">#2eaadc</span>;
+   }
+   <span style="color:rgb(215, 186, 125); font-weight:400;">label</span> <span style="color:rgb(215, 186, 125); font-weight:400;">input</span><span style="color:rgb(215, 186, 125); font-weight:400;">:checked</span> ~ <span style="color:rgb(215, 186, 125); font-weight:400;">span</span>:after {
+     display:block;
+   }
+   </code></pre>
+<p>Так будет выглядеть сверстанная радиокнопка</p>
+<img src="taskCssImg/css_162.jpg" alt="">
+<p>В обоих примерах мы использовали одну и ту же концепцию (input:checked).</p>
+<p>В браузерах чекбоксы отображаются квадратиками, а радиокнопки — кружочками. Это лучше не менять, чтобы не путать пользователя.</p>
+<p>Практика</p>
+<h2>Задание 1</h2>
+<p>Задания на формы находятся по ссылке: <a href="https://drive.google.com/drive/folders/19qQdiCs3WButHm32tNXHwT6PGoWkP-pg?usp=sharing">Кликни и получи задание</a></p>
+
+</div>
+</body>
+</html>

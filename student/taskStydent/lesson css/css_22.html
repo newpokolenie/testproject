@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="taskCss/lesStyle.css">
+</head>
+<body>
+  
+  <!-- <section class="project-container"> -->
+<div class="project-container">
+  
+
+<h2>Основы работы с grid </h2>
+<p>При работе с CSS Grid мы имеем возможность работать как с элементами, так и с контейнерами отдельно. Если сравнивать с тем же Flexbox, то логика абсолютно такая же, касаемо контейнеров и элементов. <br>
+  Ниже можно увидеть пример контейнера и элементов, которыми CSS Grid позволяет управлять каждым по отдельности</p>
+<img src="taskCssImg/css_221.jpg" alt="">
+<p>Во время верстки мы обязаны создать блок, который будет оборачивать все наши элементы, а после уже ставим в него элементы, которыми уже можем управлять.</p>
+<p>Чаще всего элементы могут стоять нетривиально, если смотреть пример выше, то на нем показана тривиальная расстановка.</p>
+<p>Касательно нетривиальной расстановки меется в виду, когда блоки имеют разные размеры, и один может быть очень широким, а другой очень высоким, но при этом все расставлено гармонично и правильно.</p>
+<h2>Свойства для контейнера</h2>
+<p>Контейнер — это часть, которая вмещает в себе управляемые элементы. В блочной верстке старого типа такие блоки чаще всего называли «wrapper», что означает с англ. «Обертка». Эта обертка задавала рамки для всего содержащего. То есть ширина адаптивной части не могла быть больше чем позволяет ей быть обертка. На моей памяти чаще всего задается 1280px.</p>
+<p>Чтобы начать работу с Grid контейнером, и сказать браузеру, что этот элемент должен определяться как CSS Grid технология, нужно прописать CSS свойство:</p>
+<ul style="list-style: none;">
+  <li>display: grid; или </li>
+  <li>display: inline-grid;  </li>
+</ul>
+<img src="taskCssImg/css_222.jpg" alt="">
+<p><font color="#F44747">Grid-template-columns</font>  - свойство которое указывает сколько будет ячеек в одной строке и какой они будут ширины. Значения задаются в px, em, %, vh, vw, 
+ <font color="#F44747">fr</font> (fraction - дробь )– Каждый <font color="#F44747">fr</font> выделяет одну часть свободного пространства. Например, если двум элементам задано <font color="#F44747">1fr</font> и <font color="#F44747">3fr</font> соответственно, то пространство будет поделено на 4 одинаковые части. Первый элемент займет ¼, а второй оставшиеся ¾ пространства.</p>
+<p><font color="#F44747">minmax(минимальное значение, максимальное значение)</font> – функция которая позволяет задать сколько минимально и максимально места будет занимать ячейка 
+  <font color="#F44747">repeat(кол-во ячеек | auto-fill | auto-fit, ширина ячеек)</font> – если вам нужно например создать несколько одинаковых ячеек то можно использовать данное значение для этого. 
+  </p>
+<p>Количество ячеек – задается положительное число от 1 и до скольки вам нужно ячеек.</p>  
+<p><font color="#F44747">Auto-fill(автозаполнение)</font> – автоматически заполняет контейнер ячейками заданной ширины и если ячейка выходит за пределы контейнера то ее переносит на следующую строку. </p>
+<p><font color="#F44747">Auto-fit(автоподгонка)</font> – автоматически подгоняет ячейки под максимальный размер контейнера. Если ячейка выходит за пределы контейнера то ее переносит на новую строку.</p>
+<h3>Пример 1</h3>
+<p>Создадим grid контейнер и сделаем так чтобы там было 4ре ячейки по 100px каждая html: </p>
+
+
+
+<div class="code_container">
+  <ol class="code_list">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+     
+  </ol>
+  <pre style="margin: 0;">
+  <code id="htmlViewer" style="color:rgb(220, 220, 220); font-weight:400;background-color:rgb(30, 30, 30);background:rgb(0, 0, 0);display:block;padding: 0px 10px; border-radius:10px"><span style="color:rgb(155, 155, 155); font-weight:400;">&lt;<span style="color:rgb(86, 156, 214); font-weight:400;">div</span> <span style="color:rgb(156, 220, 254); font-weight:400;">id</span>=<span style="color:rgb(214, 157, 133); font-weight:400;">&quot;grid&quot;</span>&gt;</span>
+  <span style="color:rgb(155, 155, 155); font-weight:400;">&lt;<span style="color:rgb(86, 156, 214); font-weight:400;">div</span> <span style="color:rgb(156, 220, 254); font-weight:400;">class</span>=<span style="color:rgb(214, 157, 133); font-weight:400;">&quot;item&quot;</span>&gt;</span>Ячейка1<span style="color:rgb(155, 155, 155); font-weight:400;">&lt;/<span style="color:rgb(86, 156, 214); font-weight:400;">div</span>&gt;</span>
+  <span style="color:rgb(155, 155, 155); font-weight:400;">&lt;<span style="color:rgb(86, 156, 214); font-weight:400;">div</span> <span style="color:rgb(156, 220, 254); font-weight:400;">class</span>=<span style="color:rgb(214, 157, 133); font-weight:400;">&quot;item&quot;</span>&gt;</span>Ячейка2<span style="color:rgb(155, 155, 155); font-weight:400;">&lt;/<span style="color:rgb(86, 156, 214); font-weight:400;">div</span>&gt;</span>
+  <span style="color:rgb(155, 155, 155); font-weight:400;">&lt;<span style="color:rgb(86, 156, 214); font-weight:400;">div</span> <span style="color:rgb(156, 220, 254); font-weight:400;">class</span>=<span style="color:rgb(214, 157, 133); font-weight:400;">&quot;item&quot;</span>&gt;</span>Ячейка3<span style="color:rgb(155, 155, 155); font-weight:400;">&lt;/<span style="color:rgb(86, 156, 214); font-weight:400;">div</span>&gt;</span>
+  <span style="color:rgb(155, 155, 155); font-weight:400;">&lt;<span style="color:rgb(86, 156, 214); font-weight:400;">div</span> <span style="color:rgb(156, 220, 254); font-weight:400;">class</span>=<span style="color:rgb(214, 157, 133); font-weight:400;">&quot;item&quot;</span>&gt;</span>Ячейка4<span style="color:rgb(155, 155, 155); font-weight:400;">&lt;/<span style="color:rgb(86, 156, 214); font-weight:400;">div</span>&gt;</span>
+<span style="color:rgb(155, 155, 155); font-weight:400;">&lt;/<span style="color:rgb(86, 156, 214); font-weight:400;">div</span>&gt;</span>
+</code></pre>
+</div>
+<br>
+<div class="code_container">
+  <ol class="code_list">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+     
+  </ol>
+    <ul class="list_nontype">
+      <li><span class="className">#grid</span>{</li>
+      <li><span class="property">max-width:</span><span class="value">500</span><span class="px">px</span>;</li>
+      <li><span class="property">display:</span><span class="blue">grid</span>;</li>
+      <li><span class="property">border:</span><span class="value">1</span><span class="px">px </span><span class="blue">solid black</span>;</li>
+      <li><span class="className">.item</span>{</li>
+      <li><span class="property">background-color:</span><span class="blue">lime</span>;</li>
+      <li><span class="property">border:</span><span class="value">1</span><span class="px">px </span><span class="blue">solid black</span>;</li>
+      <li><span class="property">padding:</span><span class="value">10</span><span class="px">px</span>;</li>
+      
+      <li>}</li>
+      
+        
+  </ul>
+</div>
+<h3>Результат</h3>
+<img src="taskCssImg/css_223.jpg" alt="">
+<img src="taskCssImg/css_224.jpg" alt="">
+ <p>Подробнее о css grid <a href="https://docs.google.com/document/d/1jLOff897KbokksmIDbfxCZjaMzia6g4l/edit" ><font color="white">тут</font></a></p>
+
+
+</div>
+</body>
+</html>
